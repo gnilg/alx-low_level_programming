@@ -1,9 +1,14 @@
 #include <stdio.h>
+/**
+ * main - entry point
+ *
+ * Description:'the programm's description'
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	/**
-	 * new description
-	 */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
