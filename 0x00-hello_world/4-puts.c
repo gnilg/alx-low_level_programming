@@ -1,7 +1,9 @@
 #include <stdio.h>
-/*il s'agit ici de mon premier programme c */
 int main(void)
 {
+	/**
+	 * new description
+	 */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
