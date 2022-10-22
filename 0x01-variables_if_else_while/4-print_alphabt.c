@@ -12,10 +12,10 @@ if (ch == 'e')
 {
     ch = ch + 1;
 }
-    if (ch == 'q')
-    {
-        ch = ch + 1;
-    }
+if (ch == 'q')
+{
+    ch = ch + 1;
+}
 putchar(ch);
 
 }
