@@ -8,6 +8,6 @@ int main(void)
 int nb;
 for (nb = 48 ; nb <= 57 ; nb++)
 putchar(nb);
-putchar("\n");
+putchar('\n');
 return (0);
 }
