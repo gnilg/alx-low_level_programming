@@ -4,9 +4,10 @@
  * Return: always 0
  */
 int main (void) {
-char ch;
+   char ch;
 
-for(ch = 'a' ; ch <= 'z' ; ch++)
-ptchar(ch);
-return (0);
+   for(ch = 'a' ; ch <= 'z' ; ch++)
+   ptchar(ch);
+
+   return (0);
 }
