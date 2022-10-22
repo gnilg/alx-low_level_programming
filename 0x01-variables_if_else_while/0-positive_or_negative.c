@@ -7,7 +7,6 @@
 /* betty style doc for function main goes there */
 /**
  * main-positive or negative task
- * 
  * Return: always 0
  */
 int main(void)
