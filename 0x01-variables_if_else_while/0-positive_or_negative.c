@@ -6,8 +6,8 @@
 
 /* betty style doc for function main goes there */
 /**
- * main : positive or negative task
- * Return : 0
+ * main: positive or negative task
+ * Return:0
  */
 int main(void)
 {
@@ -22,11 +22,11 @@ int main(void)
 	}
 	else if (n + 0 == 0)
 	{
-		printf("%d is zero", n );
+		printf("%d is zero\n", n );
 	}
 	else
 	{
-		printf("%d is negative ", n );
+		printf("%d is negative\n", n );
 	}
 	return (0);
 }
