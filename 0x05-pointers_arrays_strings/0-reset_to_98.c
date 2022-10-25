@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "tete.h"
 
+
 /**
  * main - check the code 
  *
