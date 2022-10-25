@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * _strlen - return length of char
- * return : the length of char
+ * _strlen - returns length of char
+ * Return : the length of char
  * @s : a pointer of strings
- *return : the value of len
+ * Return : the value of len
  */
 
 
