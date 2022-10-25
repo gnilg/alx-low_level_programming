@@ -5,9 +5,7 @@
  * swap_int - change rhe value of two int
  * @a : pointer of first value
  * @b : pointer of the second value
- * 
  * return : void
- * 
  */
 
 void swap_int(int *a, int *b)
