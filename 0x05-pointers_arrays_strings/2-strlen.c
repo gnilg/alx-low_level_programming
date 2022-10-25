@@ -3,8 +3,9 @@
 
 /**
  * _strlen - return length of char
+ * return : the length of char
  * @s : a pointer of strings
- *Return : the value of len
+ *return : the value of len
  */
 
 
