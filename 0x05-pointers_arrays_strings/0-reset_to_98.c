@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "tete.h"
 
 /**
  * main - check the code 
