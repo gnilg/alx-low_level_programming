@@ -1,19 +1,16 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * swap_int - change rhe value of two int
- * @a : pointer of first value
- * @b : pointer of the second value
- * return : void
+ * swap_int - swap value of two ints.
+ * @a: pointer to one int.
+ * @b: pointer to second int.
+ *
+ * Return: void.
  */
-
 void swap_int(int *a, int *b)
 {
-int temp;
-temp = *a;
-*a = *b;
-*b = temp;
+	int c;
 
-
+	c = *a;
+	*a = *b;
+	*b = c;
 }

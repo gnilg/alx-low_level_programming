@@ -1,29 +1,20 @@
-#include <stdio.h>
 #include "main.h"
-/*
-* -_puts foncrion
-*return : always 0
-*/
-void _puts(char str[]);
-int main(){
-    char chaine[] = "I do not fear computers. I fear the lack of them - Isaac Asimov"; 
+/**
+ * _puts - prints string followed by newline
+ * @str: pointer to string
+ *
+ * Return: void.
+ */
+void _puts(char *str)
+{
+	int i;
 
-    _puts(chaine);
-    
-
-
-    return (0);
+	i = 0;
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		i++;
+		str++;
+	}
+	_putchar('\n');
 }
-
-void _puts(char str[]){
-    int i = 0;
-    char s = 'q';
-    while (str[i] != '\0')
-    {
-        s = str[i];
-        _putchar(s);
-        i++;
-    }
-}
-    
-
