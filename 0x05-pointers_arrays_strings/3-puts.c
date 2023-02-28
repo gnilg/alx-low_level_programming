@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /*
-*main -_puts foncrion
+* -_puts foncrion
 *return : always 0
 */
 void _puts(char str[]);
