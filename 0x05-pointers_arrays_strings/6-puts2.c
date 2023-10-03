@@ -1,22 +1,30 @@
 #include "main.h"
+
 /**
- * puts2 - prints very other character in string.
- * @str: pointer to string
- *
- * Return: void.
+ *puts2 - Entry point
+ *@str: pointer the string we want to change
+ *Return: no return
  */
 void puts2(char *str)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (*(str + i) != '\0')
 	{
-		if (i % 2 == 0)
-		{
-			_putchar(str[i]);
-		}
 		i++;
 	}
-	_putchar('\n');
+
+	j = 0;
+	while (j < i)
+	{
+		if (j % 2 == 0)
+		{
+			_putchar(str[j]);
+		}
+
+		j++;
+	}
+	_putchar ('\n');
 }

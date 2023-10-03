@@ -1,35 +1,33 @@
 #include "main.h"
+
 /**
- * puts_half - prints half of a string.
- * @str: pointer to string.
- *
- * Return: void.
+ *puts_half - Entry point
+ *@str: pointer the string we want to change
+ *Return: no return
  */
 void puts_half(char *str)
 {
-	int n, length, mid;
+	int i;
+	int j;
 
-	length = 0;
-	while (str[length] != '\0')
+	i = 0;
+	while (*(str + i) != '\0')
 	{
-		length++;
+		i++;
+	}
+	i++;
+	if (i % 2 == 1)
+	{
+		j = (i - 1) / 2;
+	} else
+	{
+		j = i / 2;
 	}
 
-	if (length % 2 == 0)
+	while (j < i - 1)
 	{
-		mid = length / 2;
-		for (n = mid; n < length; n++)
-		{
-			_putchar(str[n]);
-		}
+		_putchar(str[j]);
+		j++;
 	}
-	else
-	{
-		mid = (length - 1) / 2;
-		for (n = mid + 1; n < length; n++)
-		{
-			_putchar(str[n]);
-		}
-	}
-	_putchar('\n');
+	_putchar ('\n');
 }

@@ -1,1 +1,1 @@
-instruction du script
+#hello world directory

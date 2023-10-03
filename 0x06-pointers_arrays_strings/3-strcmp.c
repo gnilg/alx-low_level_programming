@@ -1,20 +1,27 @@
-#include "holberton.h"
-/**
- * _strcmp - Write a function that compares two strings.
- *
- * @s1: This is the input string
- * @s2: This is the input string
- *
- * Return: If the strings are equals return "0", if not return other number
- */
+#include "main.h"
 
+/**
+ *_strcmp - compare two strings
+ *@s1: pointer for the first string we want to compare
+ *@s2: pointer for the second string we want to compare
+ *
+ *Return: and integer
+ */
 int _strcmp(char *s1, char *s2)
 {
-	for (; (*s1 != '\0' && *s2 != '\0') && (*s1 == *s2); s1++, s2++)
-		;
-	if (*s1 == *s2)
+	int j;
+	int entero;
+
+	entero = 0;
+	for (j = 0; s1[j] != '\0'; j++)
 	{
-		return (0);
+		if (s1[j] - s2[j] != 0)
+		{
+			entero = s1[j] - s2[j];
+			break;
+		}
 	}
-	return (*s1 - *s2);
+	if (entero == 0 && s1[j] == '\0')
+		entero = s1[j] - s2[j];
+	return (entero);
 }

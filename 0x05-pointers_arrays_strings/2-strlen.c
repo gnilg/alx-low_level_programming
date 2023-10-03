@@ -1,19 +1,19 @@
 #include "main.h"
+
 /**
- * _strlen - finds and outputs length of string
- * @s: pointer to string.
+ * _strlen - Entry point
+ *@s: pointer the string we want to now length
  *
- * Return: length of a string.
+ * Return: 0
  */
 int _strlen(char *s)
 {
 	int i;
 
 	i = 0;
-	while (*s != '\0')
+	while (*(s + i) != '\0')
 	{
 		i++;
-		s++;
 	}
 	return (i);
 }

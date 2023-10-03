@@ -1,1 +1,1 @@
-Arrays and ointers in C language
+#pointers arrays and strings

@@ -1,35 +1,27 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * cap_string - Write a function that capitalizes all words of a string.
- *
- * @entry: This is the input string
- *
- * Return: String capitalized
+ *cap_string - String to Uppercase
+ *@p: pointer the string we want to capitalize
+ *Return: string
  */
-char *cap_string(char *entry)
+char *cap_string(char *p)
 {
-	int conversion, index, count;
+	int j;
 
-	char chars[] = {' ', ',', ';', '.', '!',
-			 '?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
-	conversion = 32;
-
-	for (index = 0; entry[index] != '\0'; index++)
+	j = 0;
+	while (p[j] != '\0')
 	{
-		if (entry[index] >= 'index' && entry[index] <= 'z')
-		{
-			entry[index] =  entry[index] - conversion;
-		}
-		conversion = 0;
-		for (count = 0; chars[count] != '\0'; count++)
-		{
-			if (chars[count] == entry[index])
-			{
-				conversion = 32;
-				break;
-			}
-		}
+		if (p[j] == ' ' || p[j] == ';' || p[j] == '\n' || p[j] == '\t'
+		    || p[j] == ',' || p[j] == '.' || p[j] == '!' || p[j] == '?'
+		    || p[j] == '"' || p[j] == '(' || p[j] == ')' ||
+		    p[j] == '{' || p[j] == '}')
+			if (p[j + 1] >= 'a' && p[j + 1] <= 'z')
+			p[j + 1] = p[j + 1] - 32;
+		j++;
 	}
-	return (entry);
+	if (p[0] >= 'a' && p[0] <= 'z')
+		p[0] = p[0] - 32;
+
+	return (p);
 }

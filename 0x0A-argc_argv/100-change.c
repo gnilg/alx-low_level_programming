@@ -1,48 +1,48 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - Prints coints left
- * @args: Paramater Entry
- * @argv: One number of argumets
- * Return: zero onOne number of argumetsr
+ * main - Entry point
+ *@argc: number of arguments
+ *@argv: string with arguments
+ * Return: Always 0 (Success)
  */
-
-int main(int args, char *argv[])
+int main(int argc, char *argv[])
 {
-	int  c, coins = 0;
+	int monedas;
+	int j;
+	int count;
+	int coins[5] = {25, 10, 5, 2, 1};
 
-	if (args != 2)
+	count = 0;
+	monedas = 0;
+
+	if (argc == 2)
+	{
+		for (j = 0; j <= 4; j++)
+		{
+			if (atoi(argv[1]) >= coins[j])
+			{
+				monedas = atoi(argv[1]) / coins[j];
+				count = atoi(argv[1]) % coins[j];
+				break;
+			}
+		}
+
+		for (j = 0; j <= 4; j++)
+		{
+			if (count >= coins[j])
+			{
+				monedas++;
+				count = count - coins[j];
+				j = 0;
+			}
+		}
+	} else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	c = atoi(argv[1]);
-	if (c < 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-	for (; c >= 0;)
-	{
-		if (c >= 25)
-			c -= 25;
-
-		else if (c >= 10)
-			c -= 10;
-
-		else if (c >= 5)
-			c -= 5;
-
-		else if (c >= 2)
-			c -= 2;
-
-		else if (c >= 1)
-			c -= 1;
-		else
-			break;
-		coins += 1;
-	}
-	printf("%d\n", coins);
+	printf("%d\n", monedas);
 	return (0);
 }

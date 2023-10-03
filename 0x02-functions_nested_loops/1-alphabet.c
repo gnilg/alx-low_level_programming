@@ -1,10 +1,24 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * main- description de la fonction main
- * Return: retourne tjr la valeur (0) avec success
+ *print_alphabet- prints out all the lowercase numbers from a -z
+ *
+ *main - printing out the alphabet
+ *
+ *Return: Always 0.
  */
-int main(void)
+
+void print_alphabet(void)
+
 {
-	print_alphabet();
-	return (0);
+	int i;
+
+	i = 'a';
+
+	while (i <= 'z')
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
 }

@@ -1,29 +1,24 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * leet - Write a function that encodes a string into 1337
- *
- * @changed: This is the input string
- *
- * Return: String converted to 1337
+ *leet - String to Uppercase
+ *@p: pointer the string we want to capitalize
+ *Return: string
  */
-
-char *leet(char *changed)
+char *leet(char *p)
 {
-	int index, j;
-	char minus[] = {'a', 'e', 'o', 't', 'l', '\0'};
-	char mayus[] = {'A', 'E', 'O', 'T', 'L', '\0'};
-	char numbers[] = {'4', '3', '0', '7', '1', '\0'};
+	int j;
+	int i;
+	char a1[] = {'a', 'A', 'E', 'e', 'o', 'O', 't', 'T', 'L', 'l'};
+	char a2[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (index = 0; changed[index] != '\0'; ++index)
+	for (j = 0; p[j] != '\0'; j++)
 	{
-		for (j = 0; j < 5; j++)
+		for (i = 0; i <= 9; i++)
 		{
-			if (changed[index] == minus[j] || changed[index] == mayus[j])
-			{
-				changed[index] = numbers[j];
-			}
+			if (p[j] == a1[i])
+				p[j] = a2[i];
 		}
 	}
-	return (changed);
+	return (p);
 }
